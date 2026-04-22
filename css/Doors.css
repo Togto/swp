@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+}
+ 
+ 
+body > div, table {
+    margin-left:31vw;  
+    margin-right: auto;
+    max-width: 900px;    
+}
+ 
+.Bild4{
+    width: 200px;  
+    height: 370px;    
+    margin-left : 70px;  
+    margin-right: 35px;
+}
+hr {
+    width: 100%;
+    max-width: 600px;  
+    margin: 40px 0;
+}
+.Bild7_1 img {
+    width: 600px;  
+    height: auto;      
+}
+ 
+.Text43 {
+    margin-left: 547px;  
+}
+ 
+.Text54 {
+    margin-left: 50px;  
+    margin-top: 300px;
+}
+ 
+.Bild1_1 img,
+.Bild2_1 img,
+.Bild3_1 img,
+ 
+.Bild8_1 img,
+.Bild9_1 img,
+.Bild101 img {
+  width: 100%;
+  max-width: 64%;
+  height: auto;
+  display: block;
+}
+ 
+hr {
+  margin-bottom: 0;
+}
+ 
+p {
+  margin-top: 0;
+}
+ 
+p, h1, h2, h3 {
+  line-height: 0.3;
+}
+ 
+ 
+.bildundtext {
+  display: flex;
+}
+ 
+.bildundtext2 {
+  display: flex;
+}
+ 
+.Bild61 img {
+    width: 300px;  
+    height: auto;
+    margin-left: 20px;
+}
+ 
+.bildundtext3 {
+  display: flex;
+}
+ 
+.Text64 {
+    margin-top: 63px;  
+}
+ 
+.Bild71 img {
+    width: 350px;  
+    height: auto;
+    margin-right: 20px;
+}

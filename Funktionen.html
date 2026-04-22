@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <div id="output2"></div>
+    <script>
+
+        //
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function ausgabe(wert, outputNummer) {
+            console.log(wert);
+            if (outputNummer === 1) {
+                let ausgabe = document.getElementById("output");
+                ausgabe.innerHTML += wert;
+            } else if (outputNummer === 2) {
+                let ausgabe2 = document.getElementById("output2");
+                ausgabe2.innerHTML += wert;
+
+            }
+        }
+
+
+
+        ausgabe(add(4, 5), 1)
+        ausgabe("<br>", 2);
+        ausgabe(sub(4, 5), 2);
+        ausgabe("<br>", 1);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

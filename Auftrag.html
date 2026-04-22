@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Datum prüfen</title>
+</head>
+<body>
+
+<h1>Datum prüfen</h1>
+
+<input type="date" id="datum" />
+
+<button onclick="pruefen()">Prüfen</button>
+
+<div id="liste"></div>
+
+<script>
+let ergebnisse = [];
+
+function pruefen() {
+    let datumInput = document.getElementById("datum").value;
+
+   
+    let datum = new Date(datumInput);
+    let tag = datum.getDate();
+    let monat = datum.getMonth() + 1;
+
+    let text = "";
+
+    if (tag === 24 && monat === 12) {
+        text = "Hurra es ist Weihnachten!";
+    } else {
+        text = "Leider kein Weihnachten";
+    }
+
+    ergebnisse.push(datumInput + " → " + text);
+    listeAktualisieren();
+}
+
+function listeAktualisieren() {
+    let listeDiv = document.getElementById("liste");
+    listeDiv.innerHTML = "";
+
+    for (let i = 0; i < ergebnisse.length; i++) {
+        listeDiv.innerHTML += ergebnisse[i] + "<br>";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="zid"></div>
+    <script>
+        const container = document.getElementById('zid')
+        container.innerHTML += "Hallo<br>"
+        // Zähle von 7 bis 45 
+        for(i=7;i < 46;i++){
+          container.innerHTML += i + "<br>"
+        }
+
+        // Zähle von 9 bis 99 
+        for(i=9;i < 100;i++){
+          container.innerHTML += i + "<br>"
+        }
+
+
+        // Zähle rückwärts von 10 bis 0 
+        for(i=10;i > -1; i--){
+          container.innerHTML += i + "<br>"
+        }
+
+
+
+        // Zähle rückwärts von 1234 bis 1207 
+        for(i=1234;i > 1206; i--){
+          container.innerHTML += i + "<br>"
+        }
+
+        
+
+        // Gib Deinen Namen genau 8 mal aus 
+        for(i=8;i > -1;i--){
+          container.innerHTML  +="Tobi" + "<br>"
+        }
+        // Zähle von 0 auf 10, dann gib Deinen Namen aus, dann zähle  von 10 auf 0 
+
+
+        // Aufgabe 1 
+        let x = 34;
+        x= Math.floor(Math.random()*100);
+        container.innerHTML += "Zufallszahl x: " + x + "<br>"
+
+        // Wenn die Zahl kleiner ist als 20  gib aus "Mini" 
+        if(i<20) {
+             container.innerHTML  +="Mini"+ "<br>"
+        }
+
+
+        // Wenn die Zahl zw. 20 und 50 ist gib aus "Medium"
+         if(i>=20&&i<=50) {
+             container.innerHTML  +="Medium"+ "<br>"
+        }
+
+        // Wenn die Zahl größer als 50 ist gib aus "Large" 
+        if(i>50) {
+             container.innerHTML  +="Large" + "<br>"
+        }
+
+        
+
+        
+
+        // Aufgabe 2 
+
+        // Wenn die Zahl kleiner gleich 7 ist gib aus "Mini"
+         if(i<=7) {
+             container.innerHTML  +="Mini" + "<br>"
+        }
+
+
+        // Wenn die Zahl zwischen 7 und 90 ist gib  aus "Medium" 
+        if(i>=7&&i<=90) {
+             container.innerHTML  +="Medium" + "<br>"
+        }
+
+        // Wenn die Zahl größer als 90 ist gib aus "Large" 
+
+ 
+    </script>
+</body>
+</html>
