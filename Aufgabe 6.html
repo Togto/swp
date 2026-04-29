@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liste</title>
+    <link rel="stylesheet" href="css/Aufgabe6.css">
+</head>
+
+<body>
+
+    <h1>Supertolle Liste</h1>
+
+    <input type="text" id="eingabe" placeholder="Text eingeben">
+
+    <button onclick="hinzufuegen()">Hinzufügen</button>
+
+    <div id="liste"></div>
+
+    <script>
+        let liste = [];
+
+        function hinzufuegen() {
+            let text = document.getElementById("eingabe").value;
+
+            if (text === "") return;
+
+            liste.push(text);
+            document.getElementById("eingabe").value = "";
+            anzeigen();
+        }
+
+        function entfernen(index) {
+            liste.splice(index, 1); 
+            anzeigen();
+        }
+
+        function anzeigen() {
+            let ausgabe = document.getElementById("liste");
+            ausgabe.innerHTML = "";
+
+            for (let i = 0; i < liste.length; i++) {
+                ausgabe.innerHTML += 
+                    liste[i] + 
+                    ' <button onclick="entfernen(' + i + ')">Löschen</button><br>';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
