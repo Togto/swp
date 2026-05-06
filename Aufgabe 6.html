@@ -14,6 +14,8 @@
     <input type="text" id="eingabe" placeholder="Text eingeben">
 
     <button onclick="hinzufuegen()">Hinzufügen</button>
+     
+    <button onclick="wörterzählen()">Wörterzählen</button>
 
     <div id="liste"></div>
 
@@ -44,6 +46,12 @@
                     liste[i] + 
                     ' <button onclick="entfernen(' + i + ')">Löschen</button><br>';
             }
+        }
+
+        function wörterzählen() {
+            return liste.length;
+            ausgabe.innerHTML = "";
+
         }
     </script>
 
