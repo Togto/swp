@@ -1,15 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Simsons.css">
     <title>Simsons</title>
 </head>
+
 <body>
+
+    <div id="rowone">
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place placeclear"></div>
+    </div>
+
+    <br>
+
+    <div id="rowtwo">
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place placeclear"></div>
+    </div>
+
+
     <script>
 
         
+        var figuren = ["apu","barney","bart","charles","glancy","grandpa","hibbert","homer","krusty","marge"];
+
+
+       
+        var plaetze = document.querySelectorAll(".place");
+
+
+        
+        plaetze[0].innerHTML = "<img src='img/apu_1.png'><p>Apu</p>";
+        plaetze[1].innerHTML = "<img src='img/barney_2.png'><p>Barney</p>";
+        plaetze[2].innerHTML = "<img src='img/bart_3.png'><p>Bart</p>";
+        plaetze[3].innerHTML = "<img src='img/charles_4.png'><p>Charles</p>";
+        plaetze[4].innerHTML = "<img src='img/glancy_5.png'><p>Glancy</p>";
+        plaetze[5].innerHTML = "<img src='img/grandpa_7.png'><p>Grandpa</p>";
+        plaetze[6].innerHTML = "<img src='img/hibbert_6.png'><p>Hibbert</p>";
+        plaetze[7].innerHTML = "<img src='img/homer_8.png'><p>Homer</p>";
+        plaetze[8].innerHTML = "<img src='img/krusty_9.png'><p>Krusty</p>";
+        plaetze[9].innerHTML = "<img src='img/marge_10.png'><p>Marge</p>";
+
+
+        
+        document.getElementById("rowone").style.backgroundColor = "orange";
+        document.getElementById("rowtwo").style.backgroundColor = "blue";
+
+
+        
+        var style = document.createElement("style");
+
+        style.innerHTML = `
+        .gelb{
+            background: yellow;
+        }
+
+        .hidden{
+            display:none;
+        }
+        `;
+
+        document.head.appendChild(style);
+
+
+        
+        document.querySelectorAll(".place:not([id])").forEach(function(div){
+            div.classList.add("gelb");
+        });
+
+
+        
+        var bilder = document.querySelectorAll(".place img");
+
+        bilder.forEach(function(img){
+
+            img.addEventListener("click", function(){
+
+                var versteckt = document.querySelectorAll(".hidden").length > 0;
+
+                bilder.forEach(function(other){
+
+                    if(other !== img){
+
+                        if(versteckt){
+                            other.classList.remove("hidden");
+                        }else{
+                            other.classList.add("hidden");
+                        }
+
+                    }
+
+                });
+
+            });
+
+        });
+
     </script>
-    
+
 </body>
 </html>
