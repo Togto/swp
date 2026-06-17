@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <link rel="stylesheet" href="Projekt.css">
+</head>
+<body>
+
+<h2 id="text">Hallo</h2>
+
+<input type="text" id="eingabe" placeholder="Befehl eingeben">
+<button onclick="ausfuehren()">OK</button>
+
+<br><br>
+
+<img id="bild" src="img/Floh.png" alt="Bild">
+
+<script>
+function ausfuehren() {
+    let befehl = document.getElementById("eingabe").value;
+    let bild = document.getElementById("bild");
+    let text = document.getElementById("text");
+
+    if (befehl === "bild") {
+        bild.style.display = "block";
+    }
+
+    if (befehl === "frauen") {
+        bild.style.display = "none";
+    }
+
+    if (befehl === "text") {
+        text.innerHTML = "Der Text wurde geändert!";
+    }
+}
+</script>
+
+</body>
+</html>
